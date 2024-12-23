@@ -8,7 +8,7 @@ A simple and interactive Tic Tac Toe game built using React. This game allows on
 - **Winner Detection**: Automatically detects when a player wins or when the game ends in a draw.
 - **Reset Game**: Quickly restart the game at any time.
 
-Open your browser and go to `https://oarisar.github.io/tic-tac-toe-react/` to play the game.
+[Play the Tic Tac Toe game](https://oarisar.github.io/tic-tac-toe-react/)
 
 ## Usage
 
