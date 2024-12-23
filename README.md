@@ -8,29 +8,7 @@ A simple and interactive Tic Tac Toe game built using React. This game allows on
 - **Winner Detection**: Automatically detects when a player wins or when the game ends in a draw.
 - **Reset Game**: Quickly restart the game at any time.
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/tic-tac-toe-react.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd tic-tac-toe-react
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-   ```bash
-   npm start
-   ```
-
-5. Open your browser and go to `http://localhost:3000` to play the game.
+Open your browser and go to `https://oarisar.github.io/tic-tac-toe-react/` to play the game.
 
 ## Usage
 
