@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.header {
+  text-align: center;
+  color: white;
+  border-radius: 10px; /* Rounded corners for a softer look */
+  background: linear-gradient(135deg, #6e58ac, #351985); /* Gradient matching the theme */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow for depth */
+  padding: 20px 30px; /* Increased padding for better spacing */
+  margin-bottom: 30px;
+  border: 2px solid #351985; /* Border using one of the theme colors */
+}
+.header:hover {
+  background: linear-gradient(135deg, #351985, #6e58ac); /* Reverse gradient on hover */
+  transition: background 0.5s ease-in-out; /* Smooth transition */
+}
+
+.title {
+  font-size: 2rem; /* Title size */
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Glow effect for text */
+}
+
+.tagline {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-style: italic;
+  color: #f0e6ff; /* Softer white to complement the theme */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for the tagline */
+}
+
+
+.board {
+  display: grid;
+  background-color: #1b153f;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  margin: auto;
+  border-radius: 8px;
+  border: 5px solid  #1b153f;
+}
+
+.square:nth-child(odd) {
+  background-color: #6e58ac; /* Brown color for odd squares */
+}
+
+.square:nth-child(even) {
+  background-color: #351985; /* Lighter brown color for even squares */
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: bold;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.square:hover {
+  background-color: #907fc0;
+  transform: scale(1.1);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background-image: url('MyComponents/bg1.jpg');
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+.game-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything horizontally */
+  justify-content: center;
+  text-align: center; /* Ensures text is centered */
+  margin-top: 20px;
+}
+
+.game-status h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin: 10px 0; /* Add space between the h2 elements */
+}
+
+.game-status h2.winner {
+  color: #6afa8c; /* Green color for winner */
+  font-size: 1.7rem;
+}
+
+.game-status h2.tie {
+  color: #a1b2eb; /* Grey color for tie */
+  font-size: 1.7rem;
+}
+
+.game-status h2.turn {
+  color:white; /* Blue color for player's turn */
+  font-size: 1.7rem;
+}
+
+.reset-button {
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(122, 79, 151);
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  width: 150px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #9b6cd1;
+  transform: scale(1.05);
+}
+/* X Animation */
+.x-icon .x-line {
+  stroke: white;
+  stroke-width: 13;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawX 0.5s forwards;
+ 
+}
+
+.x-icon .line1 {
+  animation-delay: 0s;
+  
+}
+
+.x-icon .line2 {
+  animation-delay: 0.2s;
+}
+
+/* O Animation */
+.o-icon .o-circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 10;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  animation: drawO 0.6s forwards;
+}
+
+/* Animation for drawing X */
+@keyframes drawX {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animation for drawing O */
+@keyframes drawO {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/* This class will animate the stroke of the winning line */
+@keyframes strokeAnimation {
+  0% {
+    stroke-dasharray: 0;
+  }
+  100% {
+    stroke-dasharray: 1000; /* Length of the line, adjust as needed */
+  }
+}
+
+.won {
+ 
+  filter: drop-shadow(0 0 10px rgb(203, 228, 115)); /* Add a golden glow */
+  transition: all 0.3s ease-in-out; /* Smooth effect */
+}
