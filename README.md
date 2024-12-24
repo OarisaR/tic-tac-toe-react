@@ -42,8 +42,3 @@ I’d love to hear your thoughts and suggestions! If you try the game, feel free
 ---
 
 Thank you for checking out my project! 🚀
-
-## Acknowledgements
-
-- React documentation for providing excellent resources.
-- Inspiration from classic Tic Tac Toe games.
